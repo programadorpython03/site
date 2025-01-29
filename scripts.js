@@ -46,6 +46,42 @@ function nextSlide() {
 // Inicia o carrossel (muda a cada 5 segundos)
 setInterval(nextSlide, 5000);
 
+// Executa ao carregar a página
+window.onload = updateBreadcrumbs;
+
+function gerarBreadcrumbs() {
+  const breadcrumbsContainer = document.getElementById('breadcrumbs');
+  const path = window.location.pathname; // Ex: "/catalogo/kit-moana.html"
+  
+  // Divide o caminho em segmentos (ignora a primeira posição se for vazia)
+  const segments = path.split('/').filter(segment => segment !== '' && !segment.includes('.html'));
+  
+  // Mapeia os segmentos para links e labels
+  let breadcrumbHTML = '<a href="/">Início</a>';
+  let accumulatedPath = '/';
+
+  segments.forEach((segment, index) => {
+      const label = segment
+          .replace(/-/g, ' ') // Substitui hífens por espaços
+          .replace(/\b\w/g, l => l.toUpperCase()); // Capitaliza palavras
+
+      accumulatedPath += `${segment}/`;
+
+      if (index === segments.length - 1) {
+          // Último item (sem link)
+          breadcrumbHTML += ` > <span>${label}</span>`;
+      } else {
+          // Itens intermediários (com link)
+          breadcrumbHTML += ` > <a href="${accumulatedPath}">${label}</a>`;
+      }
+  });
+
+  breadcrumbsContainer.innerHTML = breadcrumbHTML;
+}
+
+// // Executa quando a página carrega
+// window.onload = gerarBreadcrumbs;
+
 // Salva o histórico de navegação no sessionStorage
 function updateBreadcrumbs() {
   const currentPage = window.location.pathname.split('/').pop();
@@ -64,6 +100,3 @@ function updateBreadcrumbs() {
       `<a href="${page}">${page.replace('.html', '').replace(/-/g, ' ')}</a>`
   ).join(' > ');
 }
-
-// Executa ao carregar a página
-window.onload = updateBreadcrumbs;
