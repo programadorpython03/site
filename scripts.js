@@ -31,3 +31,17 @@ document.querySelectorAll('.opcoes input[type="checkbox"]').forEach(checkbox => 
       atualizarTotal(kit);
   });
 });
+
+// Carrossel Automático
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carrossel-item');
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('ativo');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('ativo');
+    document.querySelector('.carrossel-container').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Inicia o carrossel (muda a cada 5 segundos)
+setInterval(nextSlide, 5000);

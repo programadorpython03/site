@@ -3,28 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Pegue e Monte - Aluguel de Peças Decorativas</title>
+    <title>Irmãs Festas</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones Redes Sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Pegue e Monte</h1>
-            <p>Sua festa personalizada de forma prática e econômica!</p>
+          <a href="index.html"><img src="./assets/image.png" alt="logomarca da empresa Irmãs Festas"></a>
+          <h1>Irmãs Festas</h1>
+          <p>Sua festa personalizada de forma prática!</p>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Carrossel de Imagens -->
+    <div class="carrossel">
+      <div class="carrossel-container">
+          <!-- Imagens gratuitas do Unsplash (links genéricos para exemplo) -->
+          <img src="https://images.unsplash.com/photo-1600693432684-802ef130428f?auto=format&fit=crop&w=1200&q=80" 
+               alt="Decoração de Festa Tropical" class="carrossel-item ativo">
+          
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" 
+               alt="Decoração de Festa Frozen" class="carrossel-item">
+          
+          <img src="https://images.unsplash.com/photo-1532117182044-031e7cd916ee?auto=format&fit=crop&w=1200&q=80" 
+               alt="Decoração de Super Heróis" class="carrossel-item">
+          
+          <img src="https://images.unsplash.com/photo-1612860607791-474b4d442d19?auto=format&fit=crop&w=1200&q=80" 
+               alt="Decoração de Festa Neon" class="carrossel-item">
+          
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80" 
+               alt="Decoração de Festa Infantil" class="carrossel-item">
+      </div>
+  </div>
+
     <section id="home">
-        <h2>Bem-vindo à Pegue e Monte!</h2>
+        <h2>Bem-vindo à loja Irmãs Festas!</h2>
         <p>Alugue peças decorativas e monte sua festa de forma fácil e criativa.</p>
         <a href="#catalogo" class="btn">Ver Catálogo</a>
     </section>
@@ -70,9 +94,14 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Pegue e Monte. Todos os direitos reservados.</p>
-    </footer>
+      <div class="redes-sociais">
+          <a href="https://instagram.com/pegueemonte" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/pegueemonte" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2025 Pegue e Monte. Todos os direitos reservados.</p>
+  </footer>
 
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
