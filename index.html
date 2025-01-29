@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pegue e Monte - Aluguel de Peças Decorativas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Pegue e Monte</h1>
+            <p>Sua festa personalizada de forma prática e econômica!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Bem-vindo à Pegue e Monte!</h2>
+        <p>Alugue peças decorativas e monte sua festa de forma fácil e criativa.</p>
+        <a href="#catalogo" class="btn">Ver Catálogo</a>
+    </section>
+
+    <section id="catalogo">
+        <h2>Catálogo de Peças</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="mesa-decorada.jpg" alt="Mesa Decorada">
+                <h3>Mesa Decorada</h3>
+                <p>R$ 50,00 / dia</p>
+                <button>Reservar</button>
+            </div>
+            <div class="produto">
+                <img src="arco-de-baloes.jpg" alt="Arco de Balões">
+                <h3>Arco de Balões</h3>
+                <p>R$ 30,00 / dia</p>
+                <button>Reservar</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma loja especializada em aluguel de peças decorativas para festas e eventos. Oferecemos uma solução prática e econômica para quem quer montar uma festa personalizada sem complicações.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pegue e Monte. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

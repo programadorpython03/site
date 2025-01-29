@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Kits - Pegue e Monte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Pegue e Monte</h1>
+            <p>Kits temáticos para sua festa!</p>
+        </div>
+        <nav>
+          <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="catalogo.html">Catálogo</a></li>
+              <li><a href="#sobre">Sobre Nós</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <section id="catalogo">
+        <h2>Catálogo de Kits Temáticos</h2>
+        <div class="kits">
+            <!-- Kit Moana -->
+            <div class="kit">
+                <div class="kit-imagens">
+                    <img src="moana-bolo.jpg" alt="Bolo Fake Moana">
+                    <img src="moana-arco.jpg" alt="Arco de Balões Moana">
+                    <img src="moana-banner.jpg" alt="Banner Moana">
+                </div>
+                <div class="kit-info">
+                    <h3>Kit Moana</h3>
+                    <p>Este kit inclui:</p>
+                    <ul>
+                        <li>Bolo fake temático</li>
+                        <li>Arco de balões</li>
+                        <li>Banner personalizado</li>
+                    </ul>
+                    <p class="preco">Preço base: R$ 150,00</p>
+                    <p class="instrucao">Adicione itens extras para personalizar seu kit:</p>
+                    <div class="opcoes">
+                        <label>
+                            <input type="checkbox" name="item" value="50"> + Mesa decorada (R$ 50,00)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="item" value="30"> + Toalha temática (R$ 30,00)
+                        </label>
+                    </div>
+                    <p class="total">Total: R$ <span id="total-moana">150</span></p>
+                    <button onclick="reservarKit('Moana')">Reservar Kit</button>
+                </div>
+            </div>
+
+            <!-- Kit Frozen -->
+            <div class="kit">
+                <div class="kit-imagens">
+                    <img src="frozen-bolo.jpg" alt="Bolo Fake Frozen">
+                    <img src="frozen-arco.jpg" alt="Arco de Balões Frozen">
+                    <img src="frozen-banner.jpg" alt="Banner Frozen">
+                </div>
+                <div class="kit-info">
+                    <h3>Kit Frozen</h3>
+                    <p>Este kit inclui:</p>
+                    <ul>
+                        <li>Bolo fake temático</li>
+                        <li>Arco de balões</li>
+                        <li>Banner personalizado</li>
+                    </ul>
+                    <p class="preco">Preço base: R$ 180,00</p>
+                    <p class="instrucao">Adicione itens extras para personalizar seu kit:</p>
+                    <div class="opcoes">
+                        <label>
+                            <input type="checkbox" name="item" value="60"> + Pufes decorativos (R$ 60,00)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="item" value="40"> + Painel fotográfico (R$ 40,00)
+                        </label>
+                    </div>
+                    <p class="total">Total: R$ <span id="total-frozen">180</span></p>
+                    <button onclick="reservarKit('Frozen')">Reservar Kit</button>
+                </div>
+            </div>
+
+            <!-- Adicione mais kits aqui -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pegue e Monte. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
