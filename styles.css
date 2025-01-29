@@ -483,3 +483,38 @@ footer {
 .redes-sociais a:hover {
   color: #ffeb3b;
 }
+
+.breadcrumbs {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs a {
+  color: #6a1b9a;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: ">";
+  margin-left: 10px;
+  color: #666;
+}

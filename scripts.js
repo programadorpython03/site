@@ -45,3 +45,25 @@ function nextSlide() {
 
 // Inicia o carrossel (muda a cada 5 segundos)
 setInterval(nextSlide, 5000);
+
+// Salva o histórico de navegação no sessionStorage
+function updateBreadcrumbs() {
+  const currentPage = window.location.pathname.split('/').pop();
+  let history = sessionStorage.getItem('navHistory') || '[]';
+  history = JSON.parse(history);
+
+  // Evita duplicar a última página
+  if (history[history.length - 1] !== currentPage) {
+      history.push(currentPage);
+      sessionStorage.setItem('navHistory', JSON.stringify(history));
+  }
+
+  // Atualiza o HTML
+  const breadcrumbs = document.getElementById('breadcrumbs');
+  breadcrumbs.innerHTML = history.map(page => 
+      `<a href="${page}">${page.replace('.html', '').replace(/-/g, ' ')}</a>`
+  ).join(' > ');
+}
+
+// Executa ao carregar a página
+window.onload = updateBreadcrumbs;
